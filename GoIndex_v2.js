@@ -1,12 +1,10 @@
 const authConfig = {
   "siteName": "GoIndex", // 网站名称
   "siteIcon": "", // 网站图标
-  "version": "_4.28", // 程序版本。用户不要手动修改
-  /*"client_id": "202264815644.apps.googleusercontent.com",
-  "client_secret": "X4Z3ca8xfWDb1Voo-F9a7ZxJ",*/
+  "version": "5.28", // 程序版本。用户不要手动修改
   // 【注意】强烈推荐使用自己的 client_id 和 client_secret
-  "client_id": "",
-  "client_secret": "",
+  "client_id": "202264815644.apps.googleusercontent.com",
+  "client_secret": "X4Z3ca8xfWDb1Voo-F9a7ZxJ",
   "refresh_token": "", // 授权 token
   /**
    * 设置要显示的多个云端硬盘；按格式添加多个
@@ -28,17 +26,17 @@ const authConfig = {
     },
     {
       id: "drive_id",
-      name: "团队盘1",
-      user: 'user1',
-      pass: "111",
+      name: "Pan1",
+      user: '',
+      pass: "",
       protect_file_link: true
     },
     {
       id: "folder_id",
-      name: "文件夹",
+      name: "Pan2",
       // 只设置密码、只设置用户名、同时设置用户名密码，都是可以的
       user: '',
-      pass: "222",
+      pass: "800",
       protect_file_link: false
     }
   ],
@@ -48,7 +46,7 @@ const authConfig = {
    * 如果设置的值过小，会导致文件列表页面滚动条增量加载（分页加载）失效；
    * 此值的另一个作用是，如果目录内文件数大于此设置值（即需要多页展示的），将会对首次列目录结果进行缓存。
    */
-  "files_list_page_size": 500,
+  "files_list_page_size": 100,
   /**
    * 搜索结果页面每页显示的数量。【推荐设置值为 50 到 1000 之间】；
    * 如果设置大于1000，会导致请求 drive api 时出错；
@@ -131,7 +129,7 @@ function html(current_drive_order = 0, model = {}) {
     window.current_drive_order = ${current_drive_order};
     window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   </script>
-  <script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe@1.1.5/app-v3.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/Luckycn/GoIndex-theme-nexmoe@1.1.6/app-v3.js"></script>
 </head>
 <body>
 </body>
